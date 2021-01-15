@@ -37,3 +37,4 @@ Please bear in mind that not all hyperparameters are exposed in config.py.
 ###  Data storage
 The raw data files are assumed and recommended to be saved in one level above the folder of the scripts. 
 
+## online-learning model for training is available now. Instructiion may vary for evaluation and prediction. 
