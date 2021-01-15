@@ -21,6 +21,12 @@ nltk.download('averaged_perceptron_tagger')
 
 TEST_SIZE = 0.3
 
+BATCH_SIZE = 15000
+NUM_BATCHES = 20
+
+EVAL_BATCH_SIZE = 124777
+
+ALL_CLASSES = [str(i) for i in range(1419)]
 PUNCTUATION_REMOVAL = [punct for punct in list(string.punctuation) if punct != '.']
 
 #resource: https://gist.github.com/sebleier/554280
@@ -38,4 +44,3 @@ STOPWORD_CUST_LIST = ['yeah','ah','uh','um','oh','all', 'me', 'i', 'my', 'myself
                       'off', 'over', 'under', 'again', 'further', 'then', 'once', 
                       'here', 'there', 'all', 'any', 'both', 'each', 'few', 'more', 
                       'most', 'other', 'some', 'such', 'same', 'so', 'than', 's', 't']
-    
