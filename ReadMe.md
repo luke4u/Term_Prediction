@@ -1,4 +1,5 @@
 # Instruction
+
 Below is the instruction to replicate the training evaluation, and test processes.
 *******************************Installation*******************************
 1) please use requirements.txt file with below command. recommend to create a virenv before installation.
@@ -12,12 +13,14 @@ Note spyder and jupyter are included. But feel free to remove them if you plan n
 
 *****************************Model training*******************************
 1) If you want to use the provided trainset for retraining, please use file trainSet_enriched.csv.
+
 2) change cwd to the folder raw data is saved.
 
 python scripts/train_pipeline.py outputs/data/trainSet_enriched.csv
 
 *****************************Model Evaluation*****************************
 1) If you want to use the provided evalset for evaluation, please use file trainSet_eval.csv.
+
 2) change cwd to the folder raw data is saved.
 
 python scripts/evaluation.py outputs/data/trainSet_eval.csv
