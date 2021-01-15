@@ -43,7 +43,7 @@ Macro-precision is selected to measure the overall model performance, with the f
 1) Model evaluation takes 17.97 s.
 1) Model prediction takes 10.35 s. 
 
-Note above running time is based on trainSet_enriched.csv, trainSet_eval.csv and candidateTestSet.txt. Also training process consists of grid search with 2 folds for 3 candidates, totalling 6 fits.
+#### Note above running time is based on trainSet_enriched.csv, trainSet_eval.csv and candidateTestSet.txt. Also training process consists of grid search with 2 folds for 3 candidates, totalling 6 fits.
 
 
 ## Weakness & Future work
@@ -66,7 +66,7 @@ Regarding over- and under-fitting, refer to EDA-metrics notebook for details of 
   -- Term frequency: a token's term frequency in a term cannot reflect its importance to a cagegory. Instead, team frequency should be the count of it in a category, i.e., num of appearance of the token in its category.
  -- Inverse document frequency: again this should be on category level, i.e., num of all cats divided by num of cats with this token.
 
- -- Above logic has been implemented in the codes.
+ #### Above logic has been implemented in the codes.
 
 #### Future work:
 1) Abbreviation recovery: EDA process finds that for a word such as 'satelite', abbrevation can appear in a form of 'sat'. However, any abbrevation form of a work, such as'sat' will reduce the TD-IDF score of 'satelite'. This may require create a dictionary or use a 3rd party library.
