@@ -1,4 +1,7 @@
-*****************************Model*****************************
+## Model details
+This documentation includes the thought processing for model, data processing, metrics, memory and runtime, weakness and future work.
+
+## Model 
 Multi-nominal Naive Bayes Classifier is selected for below reasons:
 
 1) Based on TF-IDF calculation, highly frequent tokens for each category are oberseved. This makes Multi-nominal NB suitable as the distribution of tokens for each category is applicable to Multi-nominal distribution. 
@@ -7,7 +10,7 @@ Multi-nominal Naive Bayes Classifier is selected for below reasons:
 
 3) Multi-nominal NB requires much less resources for train and test, compared to Gradient Boost Classifier as an example.
 
-************************Preprocessing************************
+## Preprocessing
 Preprocessing steps include:
 1) Punctuation: punctuation is investigated and results show a small amount of punctuations (5) appear in some terms. Here an aggressive removal methos is taken to remove all punctuation except period sign (.). 
 
@@ -26,15 +29,15 @@ Note train subset is further divided into train and validation set during model 
 
 Data enrichment may result in model overfitting, also comes at a cost of both memory and runtime.
 
-**************************Metrics**************************
+## Metrics
 Macro-precision is selected to measure the overall model performance, with the following reasoning:
 1) Category imbalance analysis found no strong class imblances for 1419 categories. Majority of categories have terms between 300 to 600.
 
-2) For minority categories, it is assumed that they have no significant business importance, as compared to majority categories. Term categories are equally important for Adthena's business in each and every sectors where its clients operate. 
+2) For minority categories, it is assumed that they have no significant business importance, as compared to majority categories. Term categories are equally important for business in each and every sectors where its clients operate. 
 
 3) From the business perspective, precision is more relevant to live prediction scenarios. 
 
-***********************Memory & Runtime**********************
+## Memory & Runtime 
 
 1) Model training takes 259.0 s.
 1) Model evaluation takes 17.97 s.
@@ -43,8 +46,8 @@ Macro-precision is selected to measure the overall model performance, with the f
 Note above running time is based on trainSet_enriched.csv, trainSet_eval.csv and candidateTestSet.txt. Also training process consists of grid search with 2 folds for 3 candidates, totalling 6 fits.
 
 
-********************Weakness & Future work*******************
-Weakness:
+## Weakness & Future work
+#### Weakness:
 1) Overfitting:
 - Considering the majority of categories, model demonstrates a macro-precision of 0.85 with a std of 0.18 during training with enrichment, and 0.58 with a std of 0.2 during evaluation without enrichment.
 
@@ -65,7 +68,7 @@ Regarding over- and under-fitting, refer to EDA-metrics notebook for details of 
 
  -- Above logic has been implemented in the codes.
 
-Future work:
+#### Future work:
 1) Abbreviation recovery: EDA process finds that for a word such as 'satelite', abbrevation can appear in a form of 'sat'. However, any abbrevation form of a work, such as'sat' will reduce the TD-IDF score of 'satelite'. This may require create a dictionary or use a 3rd party library.
 
 2) High tf-idf score token analysis: frequent tokens analysis among categories helps reveal the similairty of categories. If such, frequent tokens may help group similary categories. 

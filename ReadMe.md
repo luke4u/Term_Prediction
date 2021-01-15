@@ -1,6 +1,6 @@
 ## Instruction
 
-Below is the instruction to replicate the training evaluation, and test processes.
+Below is the instruction to replicate the training, evaluation, and test processes. Note, some parts vary for the online-learning model.
 
 ### Installation
 1) please use requirements.txt file with below command. recommend to create a virenv before installation.
@@ -13,7 +13,6 @@ step 4: pip install -r requirement.txt
 Note spyder and jupyter are included. But feel free to remove them if you plan not to create a blank virenv.
 
 ### Model training
-
 1) If you want to use the provided trainset for retraining, please use file trainSet_enriched.csv.
 2) change cwd to the folder raw data is saved.
 
@@ -37,4 +36,4 @@ Please bear in mind that not all hyperparameters are exposed in config.py.
 ###  Data storage
 The raw data files are assumed and recommended to be saved in one level above the folder of the scripts. 
 
-## online-learning model for training is available now. Instructiion may vary for evaluation and prediction. 
+## Online-learning model for training is available now. Instructiion may vary for evaluation and prediction. 
