@@ -4,7 +4,7 @@ This documentation includes the thought processing for model, data processing, m
 ## Model 
 Multi-nominal Naive Bayes Classifier is selected for below reasons:
 
-1) Based on TF-IDF calculation, highly frequent tokens for each category are oberseved. This makes Multi-nominal NB suitable as the distribution of tokens for each category is applicable to Multi-nominal distribution. 
+1) Based on TF-IDF calculation, highly frequent tokens for each category are observed. This makes Multi-nominal NB suitable as the distribution of tokens for each category is applicable to Multi-nominal distribution. 
 
 2) The order of tokens in a term (such as 'used car' Vs 'car used') does not impact the category of the term. 
 
@@ -87,3 +87,12 @@ Regarding over- and under-fitting, refer to EDA-metrics notebook for details of 
 6) Data exploration:
  - Noise terms: Some terms are chopped to None after preprocessing. These terms are assumed to noise with no informativeness. Need to review these terms for more actions.
  - Numerical tokens: no preprocessing is done on numerical tokens. But it is worth to analyse TF-IDF scores of numerical tokens to determine their importance before any actions. 
+
+7) Data enrichment (26/01/2021)
+As mentioned by Zheng in his Dissertation, external data enrichment fron Google snipets and Yahoo's suggested keywords are helpful. 
+Query length may be of interest to differentiate categories. 
+
+https://www.dcs.bbk.ac.uk/site/assets/files/1025/zheng.pdf
+
+8) Google trend (26/01/2021)
+Google trend allows you to see the ralted keywords of your search term. So it is highly desirable to integrate related topics & queries to enrich data
